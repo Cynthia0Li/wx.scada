@@ -1,0 +1,70 @@
+/**overview.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.unit {
+  color: #aaa;
+  margin-left: 20rpx;
+  margin-top:10rpx;
+  width:40%;
+  display:inline-block;
+  padding: 20rpx;
+  font-size: 26rpx;
+  border: 1rpx solid slategray;
+  line-height: 30rpx;
+}
+
+.state_1 {
+  background-color: lightgray;
+  background-image: url("../../resources/fanIcon2.png");
+  background-position-x : right;
+  background-position-y : bottom;
+  background-repeat: no-repeat;
+}
+
+.state_2 {
+  background-color: lightcyan;
+  background-image: url("../../resources/fanIcon1.png");
+  background-position-x : right;
+  background-position-y : bottom;
+  background-repeat: no-repeat;
+}
+
+.state_3 {
+  background-color: crimson;
+  background-image: url("../../resources/fanIcon3.png");
+  background-position-x : right;
+  background-position-y : bottom;
+  background-repeat: no-repeat;
+}
+
+.id {
+  color: #000000;
+}
+
+.turbinePicker {
+  margin-top:10rpx;
+  font-size: 30rpx;
+
+}
+
+.picker {
+  text-align: right;
+  font-size: 26rpx;
+  margin-right:20rpx;
+}
+

@@ -1,0 +1,28 @@
+<!--realdata.wxml-->
+<view class="turbinePicker">
+  <picker bindchange="bindPickerChange" value="{{selectedIndex}}" range="{{turbineIndexs}}">
+    <view class="picker">
+      选择当前机组：
+      {{turbineIndexs[selectedIndex]}}
+    </view>
+  </picker>
+</view>
+<view class="container">
+  <view>A相电流: {{realData.aCurrent}}</view>
+  <view>B相电流: {{realData.bCurrent}}</view>
+  <view>C相电流: {{realData.cCurrent}}</view>
+  <view>A相电压: {{realData.aVoltage}}</view>
+  <view>B相电压: {{realData.bVoltage}}</view>
+  <view>C相电压: {{realData.cVoltage}}</view>
+  <view>drivewin: {{realData.drivewin}}</view>
+  <view>frequency: {{realData.frequency}}</view>
+  <view>insDirection: {{realData.insDirection}}</view>
+  <view>insPower: {{realData.insPower}}</view>
+  <view>insSpeed: {{realData.insSpeed}}</view>
+  <view>nodrivewin: {{realData.nodrivewin}}</view>
+  <view>reactivepower: {{realData.reactivepower}}</view>
+  <view>status: {{realData.status}}</view>
+  <view>uwin: {{realData.uwin}}</view>
+  <view>vwin: {{realData.vwin}}</view>
+  <view>wwwin: {{realData.wwwin}}</view>
+</view>

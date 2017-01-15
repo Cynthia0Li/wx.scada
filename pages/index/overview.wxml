@@ -1,0 +1,21 @@
+<!--overview.wxml-->
+<view class="turbinePicker">
+  <picker bindchange="bindPickerChange" value="{{selectedIndex}}" range="{{turbineArray}}">
+    <view class="picker">
+      <image style="width: 12px; height: 12px; background-color: transparent;"src="../../resources/selsct.png"></image>
+      {{turbineArray[selectedIndex]}}
+    </view>
+  </picker>
+</view>
+<view class="turbineContainer">
+  <block wx:for="{{turbineData}}">
+    <view class="unit state_{{item.state}}">
+      <view class="id">风机ID: {{item.fanId}}</view>
+      <view>状态: {{item.unitSate}}</view>
+      <view>风速:{{item.windSpeed}}</view>
+      <view>有功功率: {{item.power}}</view>
+      <view>无功功率: {{item.reactivepower}}</view>
+    </view>
+  </block>
+  <button bindtap="stopRefresh">stop monitor</button>
+</view>
