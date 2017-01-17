@@ -1,4 +1,20 @@
 <!--realdata.wxml-->
+<scroll-view class="scrollView" scroll-x="true">
+  <view>
+  正常台数：{{basicFacts.normal}}  
+  中断台数：{{basicFacts.interrupt}}  
+  停机台数：{{basicFacts.stop}}  
+  故障台数：{{basicFacts.fault}}  
+  事件台数：{{basicFacts.event}}  
+  平均风速：{{basicFacts.avgWindSpeed}}  
+  总功率：{{basicFacts.totalPower}}
+  日发电量：{{basicFacts.totalCapacity}}
+  总发电量：{{basicFacts.sumTotalCapacity}}
+  AGC投射状态：{{basicFacts.agc}}
+  </view>
+  
+</scroll-view>
+
 <view class="turbinePicker">
   <picker bindchange="bindPickerChange" value="{{selectedIndex}}" range="{{turbineIndexs}}">
     <view class="picker">
@@ -7,21 +23,21 @@
     </view>
   </picker>
 </view>
-<view class="container">
-  <view>A相电流: {{realData.aCurrent}}</view>
-  <view>B相电流: {{realData.bCurrent}}</view>
-  <view>C相电流: {{realData.cCurrent}}</view>
-  <view>A相电压: {{realData.aVoltage}}</view>
-  <view>B相电压: {{realData.bVoltage}}</view>
-  <view>C相电压: {{realData.cVoltage}}</view>
-  <view>drivewin: {{realData.drivewin}}</view>
-  <view>frequency: {{realData.frequency}}</view>
+<view class="container" style="align-items: center;">
+  <view>A相电流（A）: {{realData.aCurrent}}</view>
+  <view>B相电流（A）: {{realData.bCurrent}}</view>
+  <view>C相电流（A）: {{realData.cCurrent}}</view>
+  <view>A相电压（V）: {{realData.aVoltage}}</view>
+  <view>B相电压（V）: {{realData.bVoltage}}</view>
+  <view>C相电压（V）: {{realData.cVoltage}}</view>
+  <view>环境温度（℃）: {{realData.drivewin}}</view>
+  <view>电网频率（Hz）: {{realData.frequency}}</view>
   <view>insDirection: {{realData.insDirection}}</view>
-  <view>insPower: {{realData.insPower}}</view>
-  <view>insSpeed: {{realData.insSpeed}}</view>
-  <view>nodrivewin: {{realData.nodrivewin}}</view>
-  <view>reactivepower: {{realData.reactivepower}}</view>
-  <view>status: {{realData.status}}</view>
+  <view>功率（kW）: {{realData.insPower}}</view>
+  <view>风速（m/s）: {{realData.insSpeed}}</view>
+  <view>机舱温度（℃）: {{realData.nodrivewin}}</view>
+  <view>无功功率（kW）: {{realData.reactivepower}}</view>
+  <view>机组状态: {{realData.status}}</view>
   <view>uwin: {{realData.uwin}}</view>
   <view>vwin: {{realData.vwin}}</view>
   <view>wwwin: {{realData.wwwin}}</view>

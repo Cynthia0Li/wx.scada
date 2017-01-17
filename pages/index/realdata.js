@@ -49,13 +49,34 @@ Page({
   onLoad: function () {
     console.log('realdata onLoading')
     var that = this
-    //console.log(that)
+    //get basicFacts
+    wx.request({
+      url: 'http://'+app.globalData.ip+':'+app.globalData.port+'/AppInterface/appashx/BasicFacts.ashx?type=BasicFacts',
+      data: {},
+      method: 'POST', 
+      success: function(res){
+        // success
+        console.log(res.data)
+        that.setData({     
+            basicFacts: res.data
+        })
+      },
+      fail: function() {
+        // fail
+      },
+      complete: function() {
+        // complete
+      }
+    })
+    
+    //get turbineIndexs
     var temp = util.getTurbineNumber(that)
-    //console.log(temp)
-    //timer = setInterval(
-      //function(){
+    
+    //get and set realdata
+    timer = setInterval(
+      function(){
       getTurbineData(app.globalData.ip, app.globalData.port, fanId)
-    //},2000)
+    },2000)
     timer1 = setInterval(
         function(){
           that.setData({
@@ -63,6 +84,7 @@ Page({
         })
         //console.log(that.data.turbineData)
       },2000)
+
     //调用应用实例的方法获取全局数据
     app.getUserInfo(function(userInfo){
       //更新数据

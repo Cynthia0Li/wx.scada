@@ -1,18 +1,18 @@
 {
   "pages":[
+    
     "pages/index/realdata",
     "pages/index/overview",
-    
     "pages/index/event",
     "pages/index/index",
     "pages/logs/logs"
   ],
   "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "风电场SCADA系统",
-    "navigationBarTextStyle":"black",
-    "enablePullDownRefresh":"true"
+    "backgroundTextStyle":"light",    
+    "navigationBarTitleText": "风电场SCADA系统",    
+    "enablePullDownRefresh":"true",
+    "navigationBarBackgroundColor": "#123456",
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "list": [{

@@ -3,10 +3,18 @@
 var app = getApp()
 Page({
   data: {
-    motto: 'Hello World',
+    motto: '欢迎，',
     userInfo: {}
   },
   //事件处理函数
+
+  enterClick: function(){
+    console.log('123!')
+    wx.navigateTo({
+      url: 'realdata'
+    })
+  },
+
   bindViewTap: function() {
     wx.navigateTo({
       url: '../logs/logs'

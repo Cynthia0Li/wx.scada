@@ -29,3 +29,10 @@
 .usermotto {
   margin-top: 200px;
 }
+
+.scrollView { 
+  margin-top: 10rpx; 
+  padding: 10rpx 10rpx 10rpx 10rpx; 
+  border: 5rpx dashed salmon;
+  font-size: 30rpx;
+}

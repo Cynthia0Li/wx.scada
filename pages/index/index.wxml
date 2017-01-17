@@ -5,6 +5,7 @@
     <text class="userinfo-nickname">{{userInfo.nickName}}</text>
   </view>
   <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+    <text class="user-motto">{{motto}} {{userInfo.nickName}}</text>
+    <button class="btnEnter" bindtap="enterClick">进入风场</button>
   </view>
 </view>
